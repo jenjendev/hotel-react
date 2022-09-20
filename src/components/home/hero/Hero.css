@@ -1,0 +1,89 @@
+.hero {
+  background: url("/src/assets/banner.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 88vh;
+  width: 100%;
+}
+.hero .container {
+  padding-top: 15%;
+}
+
+.form {
+  background-color: var(--white-color);
+  border-radius: 5px;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+input::placeholder {
+  font-size: 18px;
+  color: var(--grey-color);
+}
+.form .box {
+  padding: 15px;
+}
+.hero h1,
+.hero p {
+  color: var(--white-color);
+}
+.hero p {
+  font-weight: 500;
+}
+
+/* form */
+.headerSearch {
+  height: 80px;
+  background-color: var(--white-color);
+  border: 3px solid var(--dark-brown);
+  display: flex;
+
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  color: var(--grey-color);
+}
+.headerIcon {
+  margin-right: 5px;
+}
+.date-select {
+  position: relative;
+}
+.date {
+  position: absolute;
+  left: 0px;
+  top: 50px;
+}
+.option-seclect {
+  position: relative;
+}
+.options {
+  position: absolute;
+  background-color: white;
+
+  width: 23vw;
+  border-radius: 10px;
+}
+.optionItem {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px;
+}
+.optionItem:nth-child(1) {
+  margin-top: 50px;
+}
+.optionCounterButton {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+  .form {
+    display: flex;
+  }
+  .form input {
+    width: 100%;
+  }
+}

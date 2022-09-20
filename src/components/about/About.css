@@ -1,0 +1,67 @@
+
+
+
+.aboutContainer{
+    width:95%;
+    margin:0 auto;
+
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.about-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 50px;
+    align-items: center
+    ;text-align: left;
+    margin-top:50px;
+
+}
+.about-img img{
+  max-width: 35vw;
+}
+
+.about-employee{
+    margin-top:100px;
+}
+.text-center{
+
+    text-align: center;;
+}
+.employee-detail{
+padding-top:30px;
+
+   
+  text-align: center;
+
+}
+.about-video{
+    position: relative;
+    margin-top:50px;
+    margin-bottom:50px;
+    ;
+}
+.about-video video{
+    width:100%;
+
+}
+.vidPlayBtn{
+    position:absolute;
+    left:50%;
+    top: 50%;
+    transform :translate(-50%,-50%);
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(255,255,255,0.8);
+}
+.timeline, .testimonials{
+    margin-top:100px;
+    margin-bottom:100px;
+
+}

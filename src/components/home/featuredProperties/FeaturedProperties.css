@@ -1,0 +1,47 @@
+.fp {
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  grid-gap: 20px;
+  margin: 0 auto;
+}
+.fpItem {
+  flex: 1;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.fpImg {
+  width: 100%;
+  flex: 1;
+}
+.fpName {
+  font-weight: bold;
+}
+.fpCity {
+  font-weight: 400;
+}
+.fpPrice {
+  font-weight: 500;
+}
+.fpRating > button {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+@media (max-width: 1110px) {
+  .fp {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-gap: 20px;
+  }
+}
+@media (max-width: 655px) {
+  .fp {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    grid-gap: 20px;
+  }
+}

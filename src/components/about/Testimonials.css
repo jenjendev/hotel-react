@@ -1,0 +1,10 @@
+.testContainer{
+    max-width: 60%;;
+     margin:0 auto;
+     margin-bottom: 100px;
+ }
+ 
+ .slick-dots li button::before{
+     color:lightblue;
+     font-size: 12px;;
+ }

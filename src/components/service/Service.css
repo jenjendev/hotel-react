@@ -1,0 +1,46 @@
+
+ .serviceContainer{
+    width:95%;
+    margin:0 auto
+    ;
+   }
+   h2{
+    text-align: left;
+    margin-left: 5%;
+   }
+    .service-center {
+      width: 90vw;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+      grid-row-gap: 2rem;
+      grid-column-gap: 50px;
+    }
+    .service-center span {
+      display: inline-block;
+      color: var(--primaryColor);
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .service-center h6 {
+      letter-spacing: var(--mainSpacing);
+      text-transform: capitalize;
+    }
+    .service-center p {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @media screen and (min-width: 992px) {
+      .service-center {
+        width: 95vw;
+        max-width: 1170px;
+      }
+    }
+    
+    @media screen and (min-width: 1200px) {
+      .services p {
+        width: 100%;
+      }
+    }
+  
+  

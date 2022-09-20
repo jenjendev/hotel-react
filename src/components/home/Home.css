@@ -1,0 +1,54 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  width: 98%;
+  gap: 60px;
+  align-items: center;
+  margin-top: 50px;
+}
+.homeTitle {
+}
+
+/* discover */
+.discover {
+  width: 95%;
+}
+.discover-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.discover-item img {
+  max-width: 50vw;
+  height: 350px;
+}
+.discover-content {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-brown);
+  height: 350px;
+  padding: 35px;
+  justify-content: center;
+  color: #2c2c2c;
+  gap: 15px;
+}
+.discover-content h1 {
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.discover-content h2 {
+  font-size: 30px;
+}
+.discover-content > button {
+  max-width: fit-content;
+}
+@media (max-width: 968px) {
+  .discover-item img {
+    width: 100%;
+    height: auto;
+  }
+  .discover-item {
+    flex-wrap: wrap;
+  }
+}

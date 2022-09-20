@@ -1,0 +1,22 @@
+.featured {
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(292px, 1fr));
+  gap: 16px;
+  margin: 0 auto;
+}
+.featuredImg {
+  width: 100%;
+  object-fit: cover;
+}
+.featuredItem {
+  position: relative;
+  color: var(--white-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.featuredTitles {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
