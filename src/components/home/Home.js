@@ -5,8 +5,18 @@ import Featured from "./featured/Featured";
 import FeaturedProperties from "./featuredProperties/FeaturedProperties";
 import Hero from "./hero/Hero";
 import PropertyList from "./propertyList/PropertyList";
-import Stats from "./stats/Stats";
 
+import AnimatedFade from "../AnimatedTextWord";
+import { motion, Variants } from "framer-motion";
+
+const textAnimate = {
+  offscreen: { y: 100, opacity: 0 },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", bounce: 0.4, duration: 1 },
+  },
+};
 const Home = () => {
   return (
     <div>
@@ -17,23 +27,58 @@ const Home = () => {
         <PropertyList />
         <h2 className="homeTitle">Place guests love</h2>
         <FeaturedProperties />
-        <h2 className="homeTitle"> Featured hotel to choose</h2>
-        <Stats />
-        <h2 className="hotelType"></h2>
-        <div className="discover">
-          <div className="discover-item">
-            <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
-            <div className="discover-content">
-              <h1>Discover</h1>
-              <h2>The Restaurant</h2>
-              <p>
-                Restaurant inilla duiman at elit finibus viverra nec a lacus
-                themo the nesudea seneoice misuscipit non sagie the fermen
-                ziverra tristiue duru the ivite dianne onen nivami acsestion
-                augue artine.
-              </p>
-              <button> Learn More</button>
-            </div>
+
+        <div className="cloud">
+          <div className="container">
+            <motion.div
+              initial={"offscreen"}
+              whileInView={"onscreen"}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{ staggerChildren: 0.5 }}
+              className="content"
+            >
+              <motion.h3 variants={textAnimate}>Excellent Services</motion.h3>
+              <motion.p variants={textAnimate}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Possimus at veritatis quisquam voluptatem nostrum reprehenderit,
+                tempore sint placeat, aperiam alias, facilis voluptate quod
+                itaque deleniti molestiae non odit esse necessitatibus. Lorem
+                ipsum dolor sit, amet consectetur adipisicing elit. Nisi
+                officiis unde perferendis voluptas laborum aliquam culpa officia
+                a maiores porro.
+              </motion.p>
+              <div>
+                <button>Learn More</button>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+        <div className="data">
+          <div className="container">
+            <motion.div
+              initial={"offscreen"}
+              whileInView={"onscreen"}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{ staggerChildren: 0.5 }}
+              className="content"
+            >
+              <motion.h3 variants={textAnimate}>
+                Excellent Customer Service
+              </motion.h3>
+              <motion.p variants={textAnimate}>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
+                officiis unde perferendis voluptas laborum aliquam culpa officia
+                a maiores porro. Consequuntur officia corporis aliquam numquam,
+                fuga quisquam illo. Obcaecati, voluptatum. Lorem ipsum dolor
+                sit, amet consectetur adipisicing elit. Nisi officiis unde
+                perferendis voluptas laborum aliquam culpa officia a maiores
+                porro.
+              </motion.p>
+              <div>
+                <button>Learn More</button>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>

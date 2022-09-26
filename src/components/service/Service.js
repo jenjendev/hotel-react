@@ -17,6 +17,26 @@ import {
 
 import "./Service.css";
 import SingleQA from "./SingleQA";
+
+import Works from "./Works";
+import { motion, Variants } from "framer-motion";
+const imageAnimate = {
+  offscreen: { x: -100, opacity: 0 },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    rotate: [0, 10, 0],
+    transition: { type: "spring", stiffness: 100 },
+  },
+};
+const textAnimate = {
+  offscreen: { y: 100, opacity: 0 },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", bounce: 0.4, duration: 1 },
+  },
+};
 const Service = () => {
   const state = {
     services: [
@@ -44,24 +64,36 @@ const Service = () => {
   };
   return (
     <div className="serviceContainer">
-      <div className="service-detail">
-        <h2>what do we offer for free?</h2>
-        <div className="service-center">
+      <div className="service-header">
+        <Works />
+      </div>
+      <div className="service-detail bg-yellow">
+        <h2 className="title-service">What do we offer for free?</h2>
+        <motion.div
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{ staggerChildren: 0.5 }}
+          className="service-center"
+        >
           {state.services.map((item, index) => {
             return (
-              <article key={index} className="service">
-                <span>{item.icon}</span>
-                <h6>{item.title}</h6>
+              <motion.article
+                variants={imageAnimate}
+                key={index}
+                className="service"
+              >
+                <motion.span variants={imageAnimate}>{item.icon}</motion.span>
+                <h3>{item.title}</h3>
                 <p>{item.info}</p>
-              </article>
+              </motion.article>
             );
           })}
-        </div>
+        </motion.div>
       </div>
       <div>
-        <h2> Featured Room </h2>
+        <h2 className="title-service"> Frequently asked questions </h2>
 
-        <h2> Question </h2>
         <SingleQA />
       </div>
     </div>

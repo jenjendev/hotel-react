@@ -23,10 +23,7 @@ const Testimonials = () => {
       <div className="container">
         <div className="tes-content">
           <div className="section-title">
-            <h2>
-              {" "}
-              Client <span>Testimonials</span>
-            </h2>
+            <h2 className="title-tes"> What Client's Say? </h2>
             <Slider {...settings}>
               {sections.testimonials.map((testimonial, index) => {
                 return (
@@ -34,13 +31,17 @@ const Testimonials = () => {
                     <p className="para">
                       <span>
                         {/* <FaQuoteLeft /> */}
-                        <FontAwesomeIcon icon={faQuoteLeft} />
+                        <FontAwesomeIcon icon={faQuoteLeft} className="quote" />
                       </span>
                       &nbsp;
                       {testimonial.text}
                       <span>
                         {/* &nbsp; <FaQuoteRight /> */}
-                        &nbsp; <FontAwesomeIcon icon={faQuoteRight} />
+                        &nbsp;{" "}
+                        <FontAwesomeIcon
+                          icon={faQuoteRight}
+                          className="quote"
+                        />
                       </span>
                     </p>
                   </div>

@@ -13,7 +13,29 @@ import video from "../../assets/video.mp4";
 // import about2Img from "../../assets/images/about2_pic.jpeg";
 import Timeline from "./Timeline";
 import Testimonials from "./Testimonials";
+import AboutCard from "./AboutCard";
 
+import AnimatedFade from "../AnimatedTextWord";
+import { motion, Variants } from "framer-motion";
+
+const imageAnimate = {
+  offscreen: { x: -100, opacity: 0 },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    rotate: [0, 10, 0],
+    transition: { type: "spring", bounce: 0.4, duration: 1 },
+  },
+};
+
+const textAnimate = {
+  offscreen: { y: 100, opacity: 0 },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", bounce: 0.4, duration: 1 },
+  },
+};
 const About = () => {
   const vidRef = useRef(null);
   const [toggleVideo, setToggleVideo] = useState(false);
@@ -31,19 +53,25 @@ const About = () => {
       <div className="container">
         <div className="about-content">
           <div className="about-employee ">
-            <div className="about-title">
-              <h3 className="text-center">
-                Our services and wonders of Prague
-              </h3>
-              <p className="employee-detail">
+            <motion.div
+              initial={"offscreen"}
+              whileInView={"onscreen"}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{ staggerChildren: 0.5 }}
+              className="about-title"
+            >
+              <motion.h3 variants={textAnimate} className="text-center">
+                Our services and wonders of Prague"
+              </motion.h3>
+              <motion.p variants={textAnimate} className="employee-detail">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
                 molestias maxime tenetur, temporibus aspernatur, omnis expedita
                 saepe sapiente adipisci laboriosam necessitatibus ullam eveniet
                 asperiores nostrum.
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
 
-            <div className="about-video">
+            <motion.div variants={textAnimate} className="about-video">
               <video className="about-video" autoPlay loop ref={vidRef}>
                 <source src={video} type="video/mp4" />
               </video>
@@ -78,18 +106,30 @@ const About = () => {
                   />
                 )}
               </button>
-            </div>
+            </motion.div>
           </div>
-          <div className="about-grid ">
-            <div className="about-img">
+          <motion.div
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ staggerChildren: 0.5 }}
+            className="about-grid "
+          >
+            <motion.div variants={imageAnimate} className="about-img">
               <img src={aboutImg} />
-            </div>
-            <div className="about-title">
-              <h3 className="text-large">
+            </motion.div>
+            <motion.div
+              initial={"offscreen"}
+              whileInView={"onscreen"}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{ staggerChildren: 0.5 }}
+              className="about-title bg-yellow"
+            >
+              <motion.h3 variants={textAnimate} className="text-large">
                 We offer Great choice
                 <br /> for a relaxing vacation
-              </h3>
-              <p className="text mx-auto">
+              </motion.h3>
+              <motion.p variants={textAnimate} className="text mx-auto">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Numquam culpa distinctio mollitia consectetur dolore! Iusto
                 dolores reprehenderit at ad! Molestiae. Pitchfork selfies master
@@ -97,16 +137,22 @@ const About = () => {
                 pop-up artisan sunt. Deep v cliche lomo biodiesel Neutra
                 selfies. Shorts fixie consequat flexitarian four loko tempor
                 duis single-origin coffee. Banksy, elit small batch freegan sed.
-              </p>
-            </div>
-          </div>
-          <div className="about-grid ">
-            <div className="about-title">
-              <h3 className="text-large">
-                luxurious 5-star sleeping experience,
+              </motion.p>
+            </motion.div>
+          </motion.div>
+          <motion.div
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ staggerChildren: 0.5 }}
+            className="about-grid "
+          >
+            <div className="about-title bg-yellow mr-50">
+              <motion.h3 variants={textAnimate} className="text-large">
+                Luxurious 5-star sleeping experience
                 <br /> at a very affordable 1-star price.
-              </h3>
-              <p className="text mx-auto">
+              </motion.h3>
+              <motion.p variants={textAnimate} className="text mx-auto">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Numquam culpa distinctio mollitia consectetur dolore! Iusto
                 dolores reprehenderit at ad! Molestiae. Pitchfork selfies master
@@ -114,18 +160,71 @@ const About = () => {
                 pop-up artisan sunt. Deep v cliche lomo biodiesel Neutra
                 selfies. Shorts fixie consequat flexitarian four loko tempor
                 duis single-origin coffee. Banksy, elit small batch freegan sed.
-              </p>
+              </motion.p>
             </div>
-            <div className="about-img">
+            <motion.div variants={imageAnimate} className="about-img">
               <img src={about2Img} />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
         <div className="timeline">
           <Timeline />
         </div>
         <div className="testimonials">
-          <Testimonials />
+          <AnimatedFade>
+            <Testimonials />
+          </AnimatedFade>
+        </div>
+        <div className="team-member bg-yellow">
+          <h4 className="team-title"> Our Team</h4>
+          <motion.div
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ staggerChildren: 0.5 }}
+            className="team"
+          >
+            <motion.div variants={textAnimate} className="team-item">
+              <a href="#" className="photo">
+                <img src="https://images.pexels.com/photos/3778876/pexels-photo-3778876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+                <div className="glow-wrap">
+                  <i className="glow"></i>
+                </div>
+                <h4>John Doe</h4>
+              </a>
+            </motion.div>
+            <motion.div variants={textAnimate} className="team-item">
+              <a href="#" className="photo">
+                <img src="https://images.pexels.com/photos/5717632/pexels-photo-5717632.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+                <div className="glow-wrap">
+                  <i className="glow"></i>
+                </div>
+                <h4>Jenifer Doe</h4>
+              </a>
+            </motion.div>
+            <motion.div variants={textAnimate} className="team-item">
+              <a href="#" className="photo">
+                <img src="https://images.pexels.com/photos/4347368/pexels-photo-4347368.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+                <div className="glow-wrap">
+                  <i className="glow"></i>
+                </div>
+                <h4>Maria Joe</h4>
+              </a>
+            </motion.div>
+            <motion.div variants={textAnimate} className="team-item">
+              <a href="#" className="photo">
+                <img src="https://images.pexels.com/photos/4195342/pexels-photo-4195342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+                <div className="glow-wrap">
+                  <i className="glow"></i>
+                </div>
+                <h4>Mark Joe</h4>
+              </a>
+            </motion.div>
+          </motion.div>
+        </div>
+
+        <div className="about-card">
+          <AboutCard />
         </div>
       </div>
     </div>

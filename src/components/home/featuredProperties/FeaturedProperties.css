@@ -15,7 +15,16 @@
 .fpImg {
   width: 100%;
   flex: 1;
+  -webkit-filter: brightness(60%);
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-o-transition: all 1s ease;
+-ms-transition: all 1s ease;
+transition: all 1s ease;
 }
+.fpImg:hover {
+  -webkit-filter: brightness(100%);
+  }
 .fpName {
   font-weight: bold;
 }

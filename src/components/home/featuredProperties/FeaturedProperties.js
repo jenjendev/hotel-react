@@ -20,13 +20,13 @@ const FeaturedProperties = ({ children }) => {
       >
         <div className="fpItem">
           <img
-            src="https://cf.bstatic.com/xdata/images/hotel/square600/13125860.webp?k=e148feeb802ac3d28d1391dad9e4cf1e12d9231f897d0b53ca067bde8a9d3355&o=&s=1"
+            src="https://images.pexels.com/photos/1001965/pexels-photo-1001965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             alt=""
             className="fpImg"
           />
-          <span className="fpName">Aparthotel Stare Miasto</span>
+          <span className="fpName">Hotel Stare Miasto</span>
           <span className="fpCity">Madrid</span>
-          <span className="fpPrice">Starting from $120</span>
+          <span className="fpPrice">Starting from $320</span>
           <div className="fpRating">
             <button>8.9</button>
 
@@ -36,13 +36,13 @@ const FeaturedProperties = ({ children }) => {
 
         <div className="fpItem">
           <img
-            src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/215955381.jpg?k=ff739d1d9e0c8e233f78ee3ced82743ef0355e925df8db7135d83b55a00ca07a&o=&hp=1"
+            src="https://images.pexels.com/photos/2387624/pexels-photo-2387624.jpeg?auto=compress&cs=tinysrgb&w=800"
             alt=""
             className="fpImg"
           />
-          <span className="fpName">Comfort Suites Airport</span>
+          <span className="fpName">Luxury Hotel</span>
           <span className="fpCity">Austin</span>
-          <span className="fpPrice">Starting from $140</span>
+          <span className="fpPrice">Starting from $240</span>
           <div className="fpRating">
             <button>9.3</button>
             <span>Exceptional</span>

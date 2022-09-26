@@ -403,25 +403,23 @@ const stats = [
     img: "https://images.unsplash.com/photo-1498503182468-3b51cbb6cb24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     value: "Superior Room",
     title:
-      "Great choice for a relaxing vacation for families with children or a group of friends",
+      "400 SQ FT OF SPACE, SOARING 12-FOOT CONCRETE CEILINGS, DARK-BRUSHED OAK FLOORS AND EXPANSIVE WINDOWS WITH VIEWS",
   },
   {
     img: "https://images.unsplash.com/photo-1606744888344-493238951221?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
     value: "Deluxe Room",
-    title:
-      "Great choice for a relaxing vacation for families with children or a group of friends",
+    title: "TWO QUEEN BEDS AND APPROXIMATELY 500 SQUARE FEET OF SPACE",
   },
   {
     img: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     value: "Signature Room",
-    title:
-      "Great choice for a relaxing vacation for families with children or a group of friends",
+    title: "TWO QUEEN BEDS IN 400 TO 425 SQUARE FEET OF SPACE",
   },
   {
     img: "https://images.unsplash.com/photo-1618219740975-d40978bb7378?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1700&q=80",
     value: "Luxury Suite Room",
     title:
-      "Great choice for a relaxing vacation for families with children or a group of friends",
+      "DELIGHT IN ACCESSIBLE COMFORT WITH  380 SQUARE FEET OF SPACE, A ROLL-IN SHOWER",
   },
   // {
   //   img: `${images.icon_heart}`,

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;0,300;0,400;0,500;1,300;1,500&family=Gilda+Display&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;1,300&family=Gilda+Display&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -7,9 +7,16 @@
 body {
   font-family: "Gilda Display", serif;
 }
-h1 {
-  font-family: "Barlow Condensed", sans-serif;
+h1 , h2,h3, h4{
+
   font-family: "Gilda Display", serif;
+
+}
+p{
+  font-family: 'Barlow', sans-serif;
+}
+h3{
+  font-size: 25px;;
 }
 :root {
   --green-color: #27ae60;
@@ -57,6 +64,12 @@ input {
   border: none;
   outline: none;
   background-color: none;
+}
+.bg-yellow{
+  background-color: var(--light-yellow);
+}
+.w-100{
+  width:100vw;
 }
 /* 
 header */

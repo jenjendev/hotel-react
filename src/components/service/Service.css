@@ -3,18 +3,37 @@
     width:95%;
     margin:0 auto
     ;
+    margin-top:50px;
+   
    }
-   h2{
-    text-align: left;
-    margin-left: 5%;
+ 
+   h3{
+    padding:5px;
+
    }
+   .service-center p , .service-center span{
+    text-align: center;
+   }
+
     .service-center {
-      width: 90vw;
+  
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
       grid-row-gap: 2rem;
       grid-column-gap: 50px;
+      
+    }
+    .service{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 50px;;
+      margin-top: 50px;;
+      border-radius: 10px;
+      border: 2.5px solid var(--white-color);
+      padding: 20px;
     }
     .service-center span {
       display: inline-block;
@@ -22,13 +41,16 @@
       font-size: 2.5rem;
       margin-bottom: 1.5rem;
     }
-    .service-center h6 {
+    .service-center h4 {
       letter-spacing: var(--mainSpacing);
-      text-transform: capitalize;
+      
     }
     .service-center p {
       width: 80%;
       margin: 0 auto;
+    }
+  .title-service, .service-center{
+      padding:50px;
     }
     @media screen and (min-width: 992px) {
       .service-center {

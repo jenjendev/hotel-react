@@ -9,6 +9,7 @@ import List from "./pages/list/List";
 import Hotel from "./pages/hotel/Hotel";
 import Gallery from "./components/gallery/Gallery";
 import Service from "./components/service/Service";
+import Contact from "./components/contact/Contact";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/services" element={<Service />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/hotels" element={<List />} />
           <Route path="/hotels/:id" element={<Hotel />} />
         </Routes>

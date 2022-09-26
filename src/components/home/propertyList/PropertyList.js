@@ -6,53 +6,45 @@ const PropertyList = () => {
   const [rotate, setRotate] = useState(false);
   return (
     <div className="pList">
-      <div className="pListItem">
+      <div className="pListItem hover-img">
         <motion.div
           animate={{ rotate: rotate ? 360 : 0 }}
           onClick={() => setRotate(!rotate)}
         >
-          <img
-            src="https://cf.bstatic.com/static/img/theme-index/carousel_320x240/card-image-apartments_300/9f60235dc09a3ac3f0a93adbc901c61ecd1ce72e.jpg"
-            alt=""
-            className="pListImg"
-          />
+          <figure>
+            <img src="https://images.unsplash.com/photo-1600619754865-8fe927da0701?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cmVzb3J0fGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=800&q=60" />
+          </figure>
         </motion.div>
         <div className="pListTitles">
-          <h2>Apartments</h2>
+          <h3>Apartments</h3>
           <h3>2331 hotels</h3>
         </div>
       </div>
 
-      <div className="pListItem">
-        <img
-          src="https://cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_resorts/6f87c6143fbd51a0bb5d15ca3b9cf84211ab0884.jpg"
-          alt=""
-          className="pListImg"
-        />
+      <div className="pListItem hover-img">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1601701119495-d6e39b664001?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHJlc29ydHxlbnwwfDF8MHx8&auto=format&fit=crop&w=800&q=60" />
+        </figure>
         <div className="pListTitles">
-          <h2>Resorts</h2>
+          <h3>Resorts</h3>
           <h3>2331 hotels</h3>
         </div>
       </div>
-      <div className="pListItem">
-        <img
-          src="https://cf.bstatic.com/static/img/theme-index/carousel_320x240/card-image-villas_300/dd0d7f8202676306a661aa4f0cf1ffab31286211.jpg"
-          alt=""
-          className="pListImg"
-        />
+      <div className="pListItem hover-img">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1610036615605-636de68a306e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHJlc29ydHxlbnwwfDF8MHx8&auto=format&fit=crop&w=800&q=60" />
+        </figure>
         <div className="pListTitles">
-          <h2>Villas</h2>
+          <h3>Villas</h3>
           <h3>2331 hotels</h3>
         </div>
       </div>
-      <div className="pListItem">
-        <img
-          src="https://cf.bstatic.com/static/img/theme-index/carousel_320x240/card-image-chalet_300/8ee014fcc493cb3334e25893a1dee8c6d36ed0ba.jpg"
-          alt=""
-          className="pListImg"
-        />
+      <div className="pListItem hover-img">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWx8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" />
+        </figure>
         <div className="pListTitles">
-          <h2>Cabins</h2>
+          <h3>Hotel</h3>
           <h3>2331 hotels</h3>
         </div>
       </div>

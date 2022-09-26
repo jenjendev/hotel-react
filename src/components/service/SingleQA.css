@@ -1,21 +1,28 @@
 .qaContainer{
     margin-top:50px;
+    margin-bottom: 100px;
+}
+.accordion-item{
+    margin:30px;
+    
 }
 
-
-.qaContainer .item-icon{
+.qaContainer .accordion-icon{
     transition: var(--transition);
+    font-size: 25px;;
 }
-.qaContainer .item-head{
-    padding: 0 10px;
+.qaContainer .accordion-title{
+   
     cursor: pointer;
-    background-color: rgb(234, 245, 245);
+    background-color: var(--light-yellow);
     border-radius: 10px;;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
    
 }
-.qaContainer .item-head-border{
-    border-bottom: 2px solid var(--clr-robin-blue);
-}
+
 .qaContainer .item-body{
     margin-top: 16px;
     max-height: 0;
@@ -23,21 +30,16 @@
     transition: all 500ms linear;
     padding-left: 10px;;
 }
-.qaContainer .item-body .text{
-    padding-bottom: 16px;
-    text-align:left
+
+.qaContainer .accordion-content{
+    padding: 16px;
+
+
 }
-.qaContainer .item-body .text{
-    padding-bottom: 16px;
+
+.qaContainer .accordion-icon:hover{
+    transform: scale(1.5);
+    transition: transform 0.5s ease-in-out;
 }
-.qaContainer .item-body-show{
-    max-height: 200px;
-}
-.qaContainer .item-icon-rotate{
-    transform: scale(1.1);
-}
-.flex{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+
+  

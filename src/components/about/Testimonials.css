@@ -1,10 +1,43 @@
 .testContainer{
-    max-width: 60%;;
+   width: 100%;;
      margin:0 auto;
      margin-bottom: 100px;
+     padding-top:100px;
+ 
+     padding-bottom: 100px;;
+     border-radius: 6px;
+     
+     background:linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url("https://images.pexels.com/photos/6127612/pexels-photo-6127612.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+     background-size:cover;
  }
+
  
  .slick-dots li button::before{
-     color:lightblue;
+     color:rgb(33, 39, 42);
      font-size: 12px;;
  }
+
+ .quote{
+    color:var(--light-yellow);
+    font-size: 40px;
+ }
+ .title-tes{
+    text-align: center;
+    margin-bottom:30px;;
+    color:var(--light-yellow)
+ }
+ .para{
+    color:var(--light-yellow);
+    text-align: center;
+    max-width: 60%;
+    margin:0 auto;
+ }
+@media screen and  (max-width:600px){
+    .testContainer{
+        max-width:90%;
+        margin:0 auto;
+        margin-bottom: 100px;
+       
+        padding:30px
+    }
+}
