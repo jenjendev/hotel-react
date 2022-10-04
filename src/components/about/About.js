@@ -113,7 +113,7 @@ const About = () => {
             whileInView={"onscreen"}
             viewport={{ once: false, amount: 0.5 }}
             transition={{ staggerChildren: 0.5 }}
-            className="about-grid "
+            className="about-grid about-reverse "
           >
             <motion.div variants={imageAnimate} className="about-img">
               <img src={aboutImg} />

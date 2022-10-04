@@ -171,7 +171,7 @@ const Hero = () => {
                 </div>
                 <div className="headerSearchItem">
                   <button className="headerBtn" onClick={handleSearch}>
-                    Searchs
+                    Search
                   </button>
                 </div>
               </div>

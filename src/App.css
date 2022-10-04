@@ -50,14 +50,14 @@ ul li {
 }
 button {
   border-radius: 5px;
-  padding: 12px 12px;
+  padding: 12px ;
   background-color: var(--dark-brown);
   color: var(--white-color);
   font-weight: bold;
   border: none;
 }
 button i {
-  padding-right: 10px;
+
 }
 textarea,
 input {
@@ -201,7 +201,7 @@ footer input {
   width: 100%;
   border-radius: 5px;
 }
-footer h3 {
+footer h4 {
   font-weight: 500;
   margin-bottom: 30px;
 }

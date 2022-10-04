@@ -16,7 +16,22 @@ const Works = () => {
   return (
     <div className="works-section" id="Intro">
       {/* left name side */}
-      <div className="i-left">
+      <motion.div
+        initial={{
+          x: -100,
+        }}
+        animate={{
+          x: 0,
+        }}
+        transition={{
+          type: "tween",
+          ease: "easeInOut",
+
+          repeatDelay: 1,
+          duration: 1,
+        }}
+        className="i-left"
+      >
         <div className="i-name">
           {/* yahan change hy darkmode ka */}
           <span>Our Awesome</span>
@@ -32,7 +47,7 @@ const Works = () => {
         </div>
 
         <button className="button i-button">Contact Us</button>
-      </div>
+      </motion.div>
       {/* right image side */}
       <div className="i-right">
         <img src={Vector1} alt="" />

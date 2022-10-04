@@ -1,18 +1,53 @@
 import React from "react";
 import { footer } from "../Data";
 import "../App.css";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform, Varia } from "framer-motion";
+
+const blockVariants = {
+  initial: {
+    rotate: 0,
+  },
+  target: {
+    rotate: 360,
+  },
+};
+const textAnimate = {
+  offscreen: { y: 100, opacity: 0 },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", bounce: 0.05, duration: 1 },
+  },
+};
 
 const Footer = () => {
+  const rotate = useMotionValue(0);
+  const scale = useTransform(rotate, [0, 20], [0, 1]);
+
   return (
     <>
       <section className="footerContact">
         <div className="container">
           <div className="send flex">
-            <div className="text">
+            <motion.div
+              initial={{
+                x: -100,
+              }}
+              animate={{
+                x: 0,
+              }}
+              transition={{
+                type: "tween",
+                ease: "easeInOut",
+
+                repeatDelay: 1,
+                duration: 0.3,
+              }}
+              className="text"
+            >
               <h1>Do You Have Questions ?</h1>
               <p>We'll help you to grow your career and growth.</p>
-            </div>
+            </motion.div>
             <motion.div
               animate={{ rotate: [0, 10, 10, 0] }}
               transition={{ repeat: Infinity, duration: 2 }}
@@ -34,7 +69,16 @@ const Footer = () => {
 
       <footer>
         <div className="container">
-          <div className="box">
+          <motion.div
+            variants={blockVariants}
+            initial="initial"
+            animate="target"
+            transition={{
+              ease: "easeInOut",
+              duration: 1,
+            }}
+            className="box"
+          >
             <div className="logo">
               <img src="../images/logo-light.png" alt="" />
               <h2>Do You Need Help With Anything?</h2>
@@ -56,23 +100,23 @@ const Footer = () => {
                 </motion.button>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {footer.map((val) => (
-            <div className="box">
-              <h3>{val.title}</h3>
+            <motion.div
+              initial={"offscreen"}
+              whileInView={"onscreen"}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ staggerChildren: 0.2 }}
+              className="box"
+            >
+              <h4>{val.title}</h4>
               <ul>
                 {val.text.map((items) => (
-                  <motion.li
-                    whileHover={{ scale: 1.2, originX: 0, color: "#aa8353" }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    {" "}
-                    {items.list}{" "}
-                  </motion.li>
+                  <motion.li variants={textAnimate}> {items.list} </motion.li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
       </footer>

@@ -20,7 +20,7 @@ const AboutCard = () => {
           },
           // when window width is >= 768px
           768: {
-            slidesPerView: 4,
+            slidesPerView: 3,
           },
         }}
         className="portfolio-slider"

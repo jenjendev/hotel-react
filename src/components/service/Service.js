@@ -79,12 +79,17 @@ const Service = () => {
           {state.services.map((item, index) => {
             return (
               <motion.article
-                variants={imageAnimate}
+                variants={textAnimate}
                 key={index}
                 className="service"
               >
-                <motion.span variants={imageAnimate}>{item.icon}</motion.span>
-                <h3>{item.title}</h3>
+                <motion.span variants={textAnimate}>{item.icon}</motion.span>
+                <motion.h3
+                  whileHover={{ scale: 1.05, originX: 0, color: "#aa8353" }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  {item.title}
+                </motion.h3>
                 <p>{item.info}</p>
               </motion.article>
             );

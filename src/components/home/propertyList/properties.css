@@ -3,7 +3,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(292px, 1fr));
   gap: 16px;
-  margin: 0 auto;
+ margin-left:auto;
+ margin-right: auto;
 }
 .pListItem {
   border-radius: 10px;
@@ -93,4 +94,12 @@
 
 .hover-img:hover .pListTitles {
   opacity: 1;
+}
+@media screen and (max-width:500){
+  .pList {
+   
+    display: grid;
+    grid-template-columns:1fr 80px;;
+  
+  }
 }
