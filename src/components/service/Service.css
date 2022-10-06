@@ -19,9 +19,9 @@
   
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
       
-      grid-column-gap: 30px;
+    gap: 30px;
       
     }
     .service{
@@ -65,4 +65,14 @@
       }
     }
   
+  @media screen and (max-width:500px){
+    .service-center {
   
+ 
+      display: grid;
+   margin: 0 auto;
+   max-width: 90vw;;
+      
+     gap: 30px;
+      
+  }}

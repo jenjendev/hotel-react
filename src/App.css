@@ -75,16 +75,18 @@ input {
 header */
 
 .logo img {
-  width: 80px;
+  width:80px;
 }
 header {
   background-color: var(--white-color);
-  height: 12vh;
+  height: 14vh;
   box-shadow: 0 5px 30px rgb(0 22 84/10%);
   padding: 30px 0;
   position: sticky;
   top: 0;
   z-index: 999;
+  align-items: center;
+  
 }
 header a {
   margin-left: 30px;
@@ -148,6 +150,7 @@ header .toggle {
     display: block;
     margin-top: 10px;
     transition: all 5s ease-in-out;
+
   }
   header .small {
     position: absolute;
@@ -155,7 +158,9 @@ header .toggle {
     left: 0;
     width: 100%;
     background-color: var(--light-yellow);
+   
     padding: 20px;
+   
   }
   header li a {
     display: inline-block;

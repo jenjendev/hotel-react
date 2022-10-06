@@ -93,12 +93,13 @@
     filter: blur(72px);
   }
   
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 980px) {
     .works-section {
       flex-direction: column;
       gap: 7rem;
       display: flex;
       justify-content: space-between;
+      margin-bottom: 20rem;;
     }
   
     .i-right {
@@ -112,6 +113,8 @@
       /* display: none; */
       top: -7rem !important;
     }
+   
+ 
   }
   
   /* fload div */

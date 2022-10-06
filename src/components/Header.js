@@ -9,7 +9,10 @@ const Header = () => {
     <header>
       <div className="container flex">
         <div className="logo">
-          <img src="https://freepikpsd.com/file/2019/10/logo-hotel-png-7.png" />
+          <Link to="/">
+            {" "}
+            <img src="https://www.bcdtravel.com/wp-content/uploads/bcd-travel-logo-1200x630-1.gif" />
+          </Link>
         </div>
 
         <div className="nav">

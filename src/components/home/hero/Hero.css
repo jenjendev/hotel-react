@@ -3,11 +3,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 110vh;
   width: 100%;
 }
 .hero .container {
-  padding-top: 10%;
+  padding-top: 7%;
 }
 
 .form {
@@ -17,9 +17,9 @@
   padding: 20px;
 }
 
-input::placeholder {
+.headerSearchInput > input::placeholder {
   font-size: 18px;
-  color: var(--grey-color);
+  color: black;
 }
 .form .box {
   padding: 15px;
@@ -82,13 +82,34 @@ input::placeholder {
 }
 
 @media screen and (max-width: 1000px) {
+  .hero{
+    height: 120vh;;
+  }
   .headerSearch {
+
     display: flex;
     flex-direction: column;
-    gap:30px;
+ 
+  justify-content: center;
+  gap:20px;
+    height: 40vh;
+    padding-top:10px;
+    z-index:999;
    
   }
+
   .form input {
     width: 100%;
+  }
+  .form {
+    background-color: var(--white-color);
+    border-radius: 5px;
+    margin-top: 20px;
+
+  
+  }
+  .options{
+    
+   width: 50vw;;
   }
 }

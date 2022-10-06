@@ -27,11 +27,12 @@
 }
 .hotelDistance {
   color: var(--grey-color);
-  font-weight: 800;
+  font-weight: 800;margin:5px 0px 5px 0;
 }
 .hotelPriceHighlight {
   color: var(--dark-brown);
-  font-weight: 500;
+  font-weight: 700;
+  margin:0 20px 20px 0;
 }
 .hotelImages {
   display: flex;

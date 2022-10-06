@@ -2,6 +2,7 @@ import React from "react";
 import { footer } from "../Data";
 import "../App.css";
 import { motion, useMotionValue, useTransform, Varia } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const blockVariants = {
   initial: {
@@ -60,7 +61,7 @@ const Footer = () => {
                 }}
                 className="btn5"
               >
-                Contact Us Today
+                <Link to="/contact"> Contact Us Today</Link>
               </motion.button>
             </motion.div>
           </div>
@@ -80,7 +81,6 @@ const Footer = () => {
             className="box"
           >
             <div className="logo">
-              <img src="../images/logo-light.png" alt="" />
               <h2>Do You Need Help With Anything?</h2>
               <p>
                 Receive updates, hot deals, tutorials, discounts sent straignt
@@ -121,7 +121,7 @@ const Footer = () => {
         </div>
       </footer>
       <div className="legal">
-        <span>© 2022 RealEstate. Designd By Jasmine Hoang.</span>
+        <span>© 2022 Hotel Booking. By Jasmine Hoang.</span>
       </div>
     </>
   );

@@ -52,9 +52,16 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .swiper-container {
-    width: 768px;
+    width: 568px;
     margin: 0 auto;
   }
+.portfolio img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+ 
 }
